@@ -1,0 +1,98 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    /* 추가: 전체 페이지 높이 설정 (스크롤 없애기 위함) */
+    height: 100vh; /* 뷰포트 높이의 100% */
+    overflow: hidden; /* 전체 페이지 스크롤 방지 */
+    display: flex; /* flexbox 사용하여 main 중앙 정렬 및 높이 배분 */
+    flex-direction: column;
+}
+
+header {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 헤더가 줄어들지 않도록 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    /* 수정: 세로 길이 고정 및 가로 넘침 처리 */
+    flex-grow: 1; /* 남은 공간을 main이 모두 차지하도록 */
+    overflow-y: auto; /* 내용이 넘칠 경우 세로 스크롤만 허용 */
+    overflow-x: hidden; /* 가로 넘침 내용 숨김 */
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* 이미지 갤러리 */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* 제작자 정보 */
+.info-box {
+    background-color: #e9f5ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0056b3;
+    color: #fff;
+    flex-shrink: 0; /* 푸터가 줄어들지 않도록 */
+}
